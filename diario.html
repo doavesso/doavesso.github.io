@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diário do Avesso</title>
+<meta name="description" content="30 dias para ver o que você sente por dentro. Diário guiado em PDF, para imprimir ou preencher no celular. 2 a 5 minutos por dia.">
+<meta property="og:title" content="Diário do Avesso">
+<meta property="og:description" content="Você diz &quot;tudo bem&quot;. A sua sombra discorda. 30 dias, 2 a 5 minutos por dia.">
+<meta property="og:image" content="https://doavesso.github.io/img/diario-capa.jpg">
+<style>
+:root{--fundo:#ECEEF2;--texto:#2E1F3A;--amarelo:#F2E03A;--dourado:#C9A227;--card:#fff;--suave:#5b4d68;--tint:#F6F1C9}
+@media (prefers-color-scheme:dark){:root{--fundo:#1d1426;--texto:#ECEEF2;--card:#2E1F3A;--suave:#b9aec6;--tint:#3a2b48}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--texto);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+a{color:inherit}
+.topo{font-size:.9rem;margin-bottom:12px}.topo a{text-decoration:none;border-bottom:2px solid var(--amarelo)}
+.hero{display:grid;gap:22px;align-items:center}
+.hero img{width:100%;max-width:240px;margin:0 auto;display:block;border-radius:14px;box-shadow:0 6px 20px rgba(46,31,58,.25)}
+h1{font-size:2.3rem;line-height:1.1;margin:0 0 .3rem}
+.sub{font-size:1.15rem;color:var(--suave);margin:0 0 1rem}
+.gancho{font-size:1.3rem;font-weight:800;margin:.4rem 0 .8rem}
+h2{font-size:1.3rem;margin:2.4rem 0 .8rem;border-bottom:3px solid var(--amarelo);display:inline-block;padding-bottom:2px}
+.card{background:var(--card);border-radius:16px;padding:18px 20px;box-shadow:0 1px 4px rgba(46,31,58,.12)}
+.btn{display:inline-block;background:var(--texto);color:var(--fundo);text-decoration:none;font-weight:800;border-radius:99px;padding:13px 24px;margin:.4rem .4rem .4rem 0}
+.btn.sec{background:transparent;color:var(--texto);border:2px solid var(--texto);padding:11px 22px}
+@media (prefers-color-scheme:dark){.btn{background:var(--amarelo);color:#2E1F3A}.btn.sec{background:transparent;color:var(--texto);border-color:var(--amarelo)}}
+.preco-mini{font-size:.9rem;color:var(--suave);margin:.2rem 0 0}
+.duas{display:grid;gap:14px}
+.duas ul{margin:.3rem 0 0;padding-left:1.1rem}.duas li{margin:.35rem 0}
+.sombras{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0 4px}
+.sombras figure{margin:0;background:var(--card);border-radius:12px;padding:6px 4px 4px;text-align:center}
+.sombras img{width:100%;display:block}.sombras figcaption{font-size:.72rem;font-weight:700;line-height:1.2;margin-top:2px}
+.dentro{columns:1;padding-left:1.1rem}.dentro li{margin:.35rem 0;break-inside:avoid}
+.paginas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.paginas img{width:100%;display:block;border-radius:8px;box-shadow:0 2px 8px rgba(46,31,58,.2)}
+.paginas figcaption{font-size:.78rem;color:var(--suave);text-align:center;margin-top:4px}
+.paginas figure{margin:0}
+ol.passos{padding-left:1.3rem}ol.passos li{margin:.35rem 0}
+.semanas{display:grid;gap:10px}
+.semana{background:var(--card);border-radius:12px;padding:12px 16px;border-left:5px solid var(--amarelo)}
+.semana b{display:block}
+.ciencia li{margin:.5rem 0}
+.honesto{background:var(--tint);border-radius:12px;padding:12px 16px;margin-top:10px}
+.preco{text-align:center}
+.preco .de{font-size:1.1rem;color:var(--suave)}
+.preco .por{font-size:2.4rem;font-weight:900;margin:.1rem 0}
+.preco .tag{display:inline-block;background:var(--amarelo);color:#2E1F3A;font-weight:800;font-size:.85rem;border-radius:99px;padding:3px 12px}
+details{background:var(--card);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{font-weight:700;cursor:pointer}
+details p{margin:.5rem 0 0}
+.fecho{font-style:italic}
+.discreto{font-size:.85rem;color:var(--suave);margin-top:2rem}
+.credito{font-size:.9rem;color:var(--suave);margin:-.4rem 0 .8rem}
+.reconhece ul{list-style:none;padding:0}.reconhece li{padding-left:1.6rem;position:relative}.reconhece li::before{content:"✓";position:absolute;left:0;font-weight:900;color:var(--dourado)}
+.inclui{text-align:left;max-width:440px;margin:.8rem auto;padding:0;list-style:none}.inclui li{padding:.3rem 0 .3rem 1.6rem;position:relative;border-bottom:1px solid rgba(91,77,104,.15)}.inclui li::before{content:"✓";position:absolute;left:0;font-weight:900;color:var(--dourado)}
+.barra{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px;background:var(--card);box-shadow:0 -2px 10px rgba(46,31,58,.2);transform:translateY(110%);transition:transform .25s;font-size:.85rem;line-height:1.3}
+.barra.on{transform:none}.barra .btn{margin:0;padding:10px 18px}
+body{padding-bottom:64px}
+footer{margin-top:1.2rem;color:var(--suave);font-size:.85rem;border-top:1px solid rgba(91,77,104,.25);padding-top:12px}
+@media (max-width:759px){.hero-img{order:2}}
+@media (min-width:760px){
+  .barra{display:none}body{padding-bottom:0}
+  .hero{grid-template-columns:300px 1fr}.hero img{max-width:300px}
+  .duas{grid-template-columns:1fr 1fr}
+  .dentro{columns:2;column-gap:32px}
+}
+</style>
+</head>
+<body>
+<main>
+<p class="topo"><a target="_blank" rel="noopener" href="./">← Do Avesso indica</a></p>
+
+<section class="hero">
+  <img class="hero-img" src="img/diario-capa.jpg" alt="Capa do Diário do Avesso: a Vera segurando o diário, com a sua sombra atrás">
+  <div>
+    <h1>Diário do Avesso</h1>
+    <p class="sub">30 dias para ver o que você sente por dentro.</p>
+    <p class="credito">Do canal <a target="_blank" rel="noopener" href="https://www.youtube.com/@doavessopsicologia">Do Avesso</a>, psicologia do cotidiano no YouTube.</p>
+    <p class="gancho">Você diz "tudo bem". A sua sombra discorda.</p>
+    <p>Oi, eu sou a Vera. Por fora eu sorrio, respondo "imagina, não foi nada" e mando o emoji de joinha. Por dentro, às vezes, tem cansaço, raiva engolida, uma vergonha que volta às 3 da manhã. A minha sombra mostra tudo isso. Ela é péssima em fingir.</p>
+    <p>Este diário é para olhar o seu avesso por alguns minutos por dia, sem julgamento, sem nota e sem meta de virar outra pessoa.</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://pay.cakto.com.br/y4biqdz" data-oferta="lancamento">Quero o meu diário</a>
+    <a class="btn sec" target="_blank" rel="noopener" href="amostra-diario-do-avesso.pdf">Baixar a amostra grátis</a>
+  </div>
+</section>
+
+<h2>Você se reconhece?</h2>
+  <div class="card reconhece"><b>É para você se…</b>
+    <ul>
+      <li>vive dizendo "tudo bem" e quer reparar no que fica por baixo;</li>
+      <li>pega o celular sem saber por quê, repassa conversas à noite, engole a raiva ou diz sim querendo dizer não;</li>
+      <li>gosta de entender o próprio jeito com curiosidade, e não com cobrança;</li>
+      <li>tem de 2 a 5 minutos por dia.</li>
+    </ul>
+  </div>
+
+<h2>O que vem dentro</h2>
+<p>Um PDF de 60 páginas, em duas versões: <b>A5 para imprimir</b> (frente e verso, vira um caderninho) e <b>para preencher no celular ou tablet</b>, com campos de texto.</p>
+<ul class="dentro">
+  <li><b>30 perguntas do dia</b>, curtas e concretas;</li>
+  <li>a tabela <b>"o que eu mostrei / o que eu senti de verdade"</b>;</li>
+  <li><b>as 5 sombras da Vera</b> para marcar como foi o seu dia;</li>
+  <li>um <b>"a ciência diz"</b> curtinho em cada dia, com a fonte;</li>
+  <li><b>4 revisões semanais</b>;</li>
+  <li><b>o mapa da sua sombra</b> (retrato, não diagnóstico);</li>
+  <li><b>uma carta da Vera</b> para fechar;</li>
+  <li>uma <b>caixa de ferramentas</b> numa página só;</li>
+  <li><b>QR codes</b> para os vídeos do canal;</li>
+  <li>uma página em branco para imprimir de novo.</li>
+</ul>
+<div class="sombras" aria-label="As 5 sombras">
+  <figure><img src="img/sombra-calma.png" alt=""><figcaption>calma</figcaption></figure>
+  <figure><img src="img/sombra-ansiosa.png" alt=""><figcaption>ansiosa</figcaption></figure>
+  <figure><img src="img/sombra-furiosa.png" alt=""><figcaption>furiosa</figcaption></figure>
+  <figure><img src="img/sombra-encolhida.png" alt=""><figcaption>encolhida/ triste</figcaption></figure>
+  <figure><img src="img/sombra-cansada.png" alt=""><figcaption>cansada</figcaption></figure>
+</div>
+<div class="paginas">
+  <figure><img loading="lazy" src="img/diario-pagina-exemplo.jpg" alt="Página de exemplo preenchida pela Vera"><figcaption>exemplo</figcaption></figure>
+  <figure><img loading="lazy" src="img/diario-pagina-dia1.jpg" alt="Página do dia 1"><figcaption>um dia</figcaption></figure>
+  <figure><img loading="lazy" src="img/diario-pagina-mapa.jpg" alt="Página do mapa da sombra"><figcaption>o mapa da sombra</figcaption></figure>
+</div>
+
+<h2>Como funciona</h2>
+<p><b>2 a 5 minutos por dia.</b> Mais que isso não precisa.</p>
+<ol class="passos">
+  <li>Escolha uma hora boa: de dia ou no começo da noite, longe da cama.</li>
+  <li>Responda a pergunta do dia sobre algo pequeno: uma mensagem, uma irritação, um mico leve.</li>
+  <li>Preencha o "por fora / por dentro" e marque a sua sombra.</li>
+  <li>Leia o "a ciência diz" e pronto.</li>
+</ol>
+<p>Pulou um dia? Três? Uma semana? Volta quando der. As datas vêm em branco, então dá para começar em qualquer época.</p>
+
+<h2>As 4 semanas</h2>
+<div class="semanas">
+  <div class="semana"><b>Semana 1 · A vida no celular</b>Os apps que você abre sem querer, a comparação e aquele "pode falar?" que gela a barriga.</div>
+  <div class="semana"><b>Semana 2 · Por dentro da madrugada</b>Os micos que voltam às 3 da manhã e o que fazer com eles de dia.</div>
+  <div class="semana"><b>Semana 3 · A raiva que a gente engole</b>O "tudo bem" que não estava, a colher na pia que vira explosão e jeitos de baixar a temperatura antes.</div>
+  <div class="semana"><b>Semana 4 · O sim que queria ser não</b>Os favores que você não queria fazer, o medo de decepcionar e uma frase pronta para a próxima vez.</div>
+</div>
+
+<h2>A ciência por trás</h2>
+<p>Cada exercício vem de uma ideia estudada em psicologia, numa versão curta e simples:</p>
+<ul class="ciencia">
+  <li><b>Dar nome ao que sente.</b> Pesquisas indicam que colocar em palavras o que se sente pode diminuir um pouco a reação do momento (Lieberman e colegas, 2007).</li>
+  <li><b>Escrever sobre o que se sente.</b> Estudada desde os anos 1980 (Pennebaker); o efeito encontrado é pequeno e vem de um formato mais longo que o deste diário.</li>
+  <li><b>Falar de si pelo próprio nome.</b> Pensar "a Vera está preocupada" dá um pouco de distância, como quando a gente aconselha uma amiga (Kross e colegas, 2014).</li>
+  <li><b>Planos "se… então…".</b> Decidir antes o que fazer numa situação que se repete ajuda muita gente a cumprir o que quer (Gollwitzer e Sheeran, 2006).</li>
+  <li><b>Uma frase gentil para si.</b> Programas de autocompaixão têm bons resultados em estudos; aqui é uma versão bem menor.</li>
+</ul>
+<p class="honesto">A parte honesta: nenhum estudo testou este diário. Ele não trata e não faz diagnóstico. Ele te dá alguns minutos por dia para reparar no seu avesso. Todas as fontes estão no fim do PDF.</p>
+
+<h2>Amostra grátis</h2>
+<p>Quer ver antes? A amostra tem 9 páginas: a capa, o "antes de começar", o "como usar", as 5 sombras, a página "quando parar" e os 3 primeiros dias. Baixa, imprime ou preenche no celular e vê se combina com você.</p>
+<p><a class="btn sec" target="_blank" rel="noopener" href="amostra-diario-do-avesso.pdf">Baixar a amostra grátis (PDF)</a></p>
+
+<h2>Antes de comprar: para quem não é</h2>
+  <div class="card"><b>Melhor não comprar se você…</b>
+    <ul>
+      <li>procura tratamento: isso aqui é um espelho, não um terapeuta;</li>
+      <li>está passando por uma crise agora: o melhor caminho é conversar com alguém (contatos no rodapé);</li>
+      <li>quer escrever sobre traumas ou perdas graves: o diário trabalha com coisas pequenas, de propósito;</li>
+      <li>espera uma fórmula de "30 dias para mudar de vida".</li>
+    </ul>
+  </div>
+
+<h2>Quanto custa</h2>
+<div class="card preco">
+  <span class="tag">lançamento</span>
+  <p class="de">de <s>R$ 27</s> por</p>
+  <p class="por">R$ 19,90</p>
+  <p>de lançamento, até 20/11. Depois volta para R$ 27.</p>
+  <ul class="inclui">
+    <li>Diário completo, 60 páginas, nas 2 versões (imprimir e celular)</li>
+    <li>Pagamento único, sem assinatura</li>
+    <li>Chega na hora no seu e-mail (Pix ou cartão)</li>
+    <li>Imprima quantas vezes quiser, para uso pessoal</li>
+    <li><b>Garantia de 7 dias:</b> não gostou, pede o dinheiro de volta, sem explicar</li>
+  </ul>
+  <a class="btn" target="_blank" rel="noopener" href="https://pay.cakto.com.br/y4biqdz" data-oferta="lancamento">Quero o meu diário</a>
+</div>
+
+
+<h2>Perguntas frequentes</h2>
+<details><summary>Como eu recebo?</summary><p>Logo depois da confirmação do pagamento, chega um e-mail com o link do PDF. Se não aparecer em alguns minutos, olhe o spam e a aba "Promoções". Ainda nada? Mande uma mensagem no Instagram @doavessopsicologia.</p></details>
+<details><summary>É para imprimir ou para usar no celular?</summary><p>Os dois. Vem a versão A5 para imprimir e a versão com campos para preencher no celular ou tablet (em apps como GoodNotes ou Xodo). Pode imprimir quantas vezes quiser, para uso pessoal.</p></details>
+<details><summary>Posso pular dias?</summary><p>Pode, e deve quando precisar. Pular faz parte. As datas vêm em branco.</p></details>
+<details><summary>Quanto tempo leva por dia?</summary><p>De 2 a 5 minutos.</p></details>
+<details><summary>O diário substitui terapia?</summary><p>Não. É uma ferramenta de autoconhecimento e não substitui psicoterapia nem atendimento de saúde. Se você sente que precisa de ajuda, procurar alguém vem antes de qualquer diário.</p></details>
+<details><summary>Posso dar de presente?</summary><p>Pode: é só fazer a compra com o e-mail da pessoa. O PDF é para uso pessoal.</p></details>
+
+<h2>Um recado da Vera</h2>
+<p class="fecho">A minha sombra continua aqui, fazendo careta quando eu digo "tudo bem". A sua também vai continuar. Ainda bem: ela é a parte que não mente. Se quiser olhar para ela comigo por 30 dias, o diário está aqui.</p>
+<p><a class="btn" target="_blank" rel="noopener" href="https://pay.cakto.com.br/y4biqdz" data-oferta="lancamento">Quero o meu diário · R$ 19,90</a></p>
+
+<p class="discreto">Ferramenta de autoconhecimento; não substitui psicoterapia. Para maiores de 18 anos.</p>
+<footer>
+  <p>Precisa conversar agora? <b>CVV 188</b>, ligação gratuita, 24 horas, ou chat em <a target="_blank" rel="noopener" href="https://cvv.org.br">cvv.org.br</a>.</p>
+  <p>Do Avesso · @doavessopsicologia · <a target="_blank" rel="noopener" href="termos.html">Termos</a> · <a target="_blank" rel="noopener" href="privacidade.html">Privacidade</a></p>
+</footer>
+</main>
+<div class="barra" id="barra"><span><b>Diário do Avesso</b><br>R$ 19,90 até 20/11</span><a class="btn" target="_blank" rel="noopener" href="https://pay.cakto.com.br/y4biqdz" data-oferta="lancamento">Quero o meu</a></div>
+<script>
+(function(){var b=document.getElementById("barra"),h=document.querySelector(".hero");if(!b||!h||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){b.classList.toggle("on",!e[0].isIntersecting)}).observe(h);})();
+</script>
+</body>
+</html>
