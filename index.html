@@ -40,6 +40,7 @@ h2{font-size:1.25rem;margin:2.2rem 0 .8rem;border-bottom:3px solid var(--amarelo
 .btn.sec2{background:transparent;color:var(--texto);border:2px solid currentColor;padding:8px 18px}
 .aviso{font-size:.8rem;color:var(--suave);margin:.9rem 0 0}
 @media (min-width:820px){
+  .diario{grid-template-columns:190px 1fr;align-items:center;gap:24px}.diario-capa img{width:190px}
   main{max-width:980px}
   .lista{grid-template-columns:repeat(3,1fr);gap:16px}
   .livro{display:flex;flex-direction:column;border-left:0;border-top:5px solid var(--amarelo);padding:16px 18px}
@@ -47,6 +48,8 @@ h2{font-size:1.25rem;margin:2.2rem 0 .8rem;border-bottom:3px solid var(--amarelo
   .livro .tema{margin-bottom:10px}
   .videos{grid-template-columns:repeat(3,1fr);gap:16px}
 }
+.diario{display:grid;gap:16px}
+.diario-capa img{display:block;width:150px;margin:0 auto;border-radius:10px;box-shadow:0 4px 14px rgba(46,31,58,.25)}
 footer{margin-top:2.5rem;color:var(--suave);font-size:.85rem}
 footer a{color:inherit}
 </style>
@@ -60,12 +63,15 @@ footer a{color:inherit}
 </header>
 
 <h2>Diário do Avesso</h2>
-<div class="card">
+<div class="card diario">
+  <a class="diario-capa" target="_blank" rel="noopener" href="diario.html"><img src="img/diario-capa.jpg" alt="Capa do Diário do Avesso: a Vera segurando o diário, com a sua sombra atrás" loading="lazy"></a>
+  <div>
   <span class="tag">lançamento · R$ 19,90 até 20/11</span>
   <p><strong>30 dias para ver o que você sente por dentro.</strong></p>
   <p>Um diário guiado em PDF, para imprimir ou preencher no celular, com uma pergunta por dia e a tabela "o que eu mostrei / o que eu senti de verdade". De 2 a 5 minutos por dia.</p>
   <p><a class="btn" target="_blank" rel="noopener" href="diario.html">Conhecer o diário</a> <a class="btn sec2" target="_blank" rel="noopener" href="amostra-diario-do-avesso.pdf">Amostra grátis</a></p>
   <p class="sub" style="font-size:.9rem">Ferramenta de autoconhecimento. Não substitui psicoterapia.</p>
+  </div>
 </div>
 
 <h2>Livros para ir mais fundo</h2>
