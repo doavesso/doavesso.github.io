@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Avesso indica</title>
-<meta name="description" content="Psicologia do cotidiano, sem enrolação. Vídeos, o Diário do Avesso e livros para ir mais fundo.">
+<meta name="description" content="Psicologia do cotidiano, sem enrolação. O Diário do Avesso, livros para ir mais fundo e os vídeos do canal.">
 <meta property="og:title" content="Do Avesso indica">
 <meta property="og:description" content="Psicologia do cotidiano, sem enrolação.">
 <meta property="og:image" content="https://doavesso.github.io/perfil.png">
@@ -22,14 +22,22 @@ h2{font-size:1.25rem;margin:2.2rem 0 .8rem;border-bottom:3px solid var(--amarelo
 .card{background:var(--card);border-radius:16px;padding:18px 20px;box-shadow:0 1px 4px rgba(46,31,58,.12)}
 .card p{margin:.3rem 0}
 .tag{display:inline-block;background:var(--amarelo);color:#2E1F3A;font-weight:700;font-size:.8rem;border-radius:99px;padding:2px 10px;margin-bottom:.4rem}
+.grade{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.livro{text-decoration:none;color:inherit;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(46,31,58,.12);display:block}
+.capa{aspect-ratio:2/3;display:flex;align-items:flex-end;padding:12px;font-weight:700;line-height:1.2;background:#2E1F3A;color:#F2E03A;font-size:1rem}
+.capa.b{background:#F2E03A;color:#2E1F3A}
+.capa.c{background:#C9A227;color:#2E1F3A}
+.livro img{width:100%;display:block;aspect-ratio:2/3;object-fit:cover}
+.livro span{display:block;padding:8px 12px 12px;font-size:.85rem;color:var(--suave)}
+.mais{display:none;margin-top:14px}
+.mais.aberta{display:grid}
 .videos{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
 .videos a{text-decoration:none;color:inherit;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(46,31,58,.12)}
 .videos img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
 .videos span{display:block;padding:10px 12px;font-size:.92rem;font-weight:600}
-.card ul{margin:.2rem 0 .8rem;padding-left:1.2rem}
-.card a{color:inherit}
-.btn{display:inline-block;background:var(--texto);color:var(--fundo);text-decoration:none;font-weight:700;border-radius:99px;padding:10px 20px;margin-top:.6rem}
+.btn{display:inline-block;background:var(--texto);color:var(--fundo);text-decoration:none;font-weight:700;border-radius:99px;padding:10px 20px;margin-top:.8rem;border:0;font:inherit;font-weight:700;cursor:pointer}
 @media (prefers-color-scheme:dark){.btn{background:var(--amarelo);color:#2E1F3A}}
+.aviso{font-size:.8rem;color:var(--suave);margin:.9rem 0 0}
 footer{margin-top:2.5rem;color:var(--suave);font-size:.85rem}
 footer a{color:inherit}
 </style>
@@ -50,42 +58,44 @@ footer a{color:inherit}
   <p class="sub" style="font-size:.9rem">Ferramenta de autoconhecimento. Não substitui psicoterapia.</p>
 </div>
 
-<h2>Vídeos</h2>
+<h2>Livros para ir mais fundo</h2>
+<!-- Para adicionar capa oficial (link de imagem gerado pela Amazon): trocar <div class="capa">...</div> por <img src="URL" alt="Capa de ..."> -->
+<div class="grade" id="livros-destaque">
+  <a class="livro" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/6555641843?tag=doavesso-site-20"><div class="capa">A voz na sua cabeça</div><span>Ethan Kross</span></a>
+  <a class="livro" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8566864468?tag=doavesso-site-20"><div class="capa b">Autocompaixão</div><span>Kristin Neff</span></a>
+  <a class="livro" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8571832641?tag=doavesso-site-20"><div class="capa c">Comunicação não violenta</div><span>Marshall Rosenberg</span></a>
+</div>
+<div class="grade mais" id="livros-todos">
+  <a class="livro" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B08MV6N6N1?tag=doavesso-site-20"><div class="capa b">Burnout</div><span>Emily e Amelia Nagoski (Kindle)</span></a>
+  <a class="livro" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8539009617?tag=doavesso-site-20"><div class="capa">Como as emoções são feitas</div><span>Lisa Feldman Barrett</span></a>
+</div>
+<button class="btn" id="ver-todos" type="button" aria-expanded="false" aria-controls="livros-todos">Ver todos os livros</button>
+<p class="aviso">Como associado da Amazon, eu recebo por compras qualificadas. | Links de afiliado.</p>
+
+<h2>Vídeos mais assistidos</h2>
 <div class="videos">
-  <a target="_blank" rel="noopener" href="https://youtu.be/JiHV9z62VTM"><img loading="lazy" src="https://img.youtube.com/vi/JiHV9z62VTM/mqdefault.jpg" alt=""><span>Por que você lembra daquela VERGONHA às 3 da manhã</span></a>
   <a target="_blank" rel="noopener" href="https://youtu.be/uKT5L4zgyiY"><img loading="lazy" src="https://img.youtube.com/vi/uKT5L4zgyiY/mqdefault.jpg" alt=""><span>Por que pessoas gentis explodem do NADA</span></a>
+  <a target="_blank" rel="noopener" href="https://youtu.be/JiHV9z62VTM"><img loading="lazy" src="https://img.youtube.com/vi/JiHV9z62VTM/mqdefault.jpg" alt=""><span>Por que você lembra daquela VERGONHA às 3 da manhã</span></a>
   <a target="_blank" rel="noopener" href="https://youtu.be/7VFoLrNU1Bs"><img loading="lazy" src="https://img.youtube.com/vi/7VFoLrNU1Bs/mqdefault.jpg" alt=""><span>Por que você fica EXAUSTO sem ter feito nada</span></a>
 </div>
 <p><a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/@doavessopsicologia">Ver o canal no YouTube</a></p>
 
-<h2>Livros para ir mais fundo</h2>
-<div class="card">
-  <p><strong>Vergonha e pensamentos de madrugada</strong></p>
-  <ul>
-    <li><a target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/6555641843?tag=doavesso-site-20"><em>A voz na sua cabeça</em></a>, Ethan Kross</li>
-    <li><a target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8566864468?tag=doavesso-site-20"><em>Autocompaixão</em></a>, Kristin Neff</li>
-  </ul>
-  <p><strong>A raiva que a gente engole</strong></p>
-  <ul>
-    <li><a target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8571832641?tag=doavesso-site-20"><em>Comunicação não violenta</em></a>, Marshall Rosenberg</li>
-  </ul>
-  <p><strong>Cansaço sem ter feito nada</strong></p>
-  <ul>
-    <li><a target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B08MV6N6N1?tag=doavesso-site-20"><em>Burnout</em></a>, Emily e Amelia Nagoski (Kindle)</li>
-  </ul>
-  <p><strong>Emoções, corpo e mensagens que assustam</strong></p>
-  <ul>
-    <li><a target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/8539009617?tag=doavesso-site-20"><em>Como as emoções são feitas</em></a>, Lisa Feldman Barrett</li>
-  </ul>
-  <p class="sub" style="font-size:.8rem">Como associado da Amazon, eu recebo por compras qualificadas. | Links de afiliado.</p>
-</div>
-
 <footer>
   <p>Se você está passando por um momento muito difícil, ligue para o CVV: <strong>188</strong> (24 h, gratuito).</p>
-  <p>Como associado da Amazon, eu recebo por compras qualificadas.</p>
   <p>Este conteúdo é educativo e não substitui acompanhamento profissional.</p>
   <p>Instagram e TikTok: @doavessopsicologia · <a target="_blank" rel="noopener" href="https://rafaeldorsi.github.io/noticia-pages/doavesso/termos.html">Termos</a> · <a target="_blank" rel="noopener" href="https://rafaeldorsi.github.io/noticia-pages/doavesso/privacidade.html">Privacidade</a></p>
 </footer>
 </main>
+<script>
+(function () {
+  var b = document.getElementById('ver-todos'), g = document.getElementById('livros-todos');
+  if (!b || !g) return;
+  b.addEventListener('click', function () {
+    var aberto = g.classList.toggle('aberta');
+    b.textContent = aberto ? 'Mostrar menos' : 'Ver todos os livros';
+    b.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+})();
+</script>
 </body>
 </html>
